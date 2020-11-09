@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">TravelUtilityApp</string>
     <string name="splash_description">Prepare for enjoying a good trip</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

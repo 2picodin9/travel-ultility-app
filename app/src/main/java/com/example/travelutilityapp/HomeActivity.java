@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.travelutilityapp.adapter.CardAdapter;
 import com.example.travelutilityapp.entity.CardItem;
@@ -23,11 +27,19 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         List<CardItem> cardItemList = new ArrayList<>();
-        cardItemList.add(new CardItem(R.drawable.wethear, "Weather"));
-        cardItemList.add(new CardItem(R.drawable.translate_image, "Translate"));
+        cardItemList.add(new CardItem(R.drawable.weather, "Weather Forecast"));
+        cardItemList.add(new CardItem(R.drawable.translate, "Translate"));
         cardItemList.add(new CardItem(R.drawable.convert_currency, "Currency Converter"));
 
         setCardRecycle(cardItemList);
+
+//        ImageView imageView = findViewById(R.id.cardImage);
+//        imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(WeatherActivity.class));
+//            }
+//        });
 
     }
 

@@ -1,17 +1,15 @@
 package com.example.travelutilityapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.location.Location;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.text.Html;
 import android.util.Log;
-import android.view.WindowManager;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -43,12 +41,13 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
 
+        setTitle("Weather Forecast");
+
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 //        getSupportActionBar().hide();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
-        requestPermissions();
+
 
         FusedLocationProviderClient mFusedLocationProviderClient;
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
@@ -87,6 +86,8 @@ public class WeatherActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     public String[] getJSONResponse() {
         String[] jsonData = new String[7];

@@ -5,16 +5,17 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.travelutilityapp.ConvertCurrencyActivity;
 import com.example.travelutilityapp.HomeActivity;
+import com.example.travelutilityapp.ItemListActivity;
 import com.example.travelutilityapp.R;
-import com.example.travelutilityapp.TranslateActivity;
+import com.example.travelutilityapp.TodoActivity;
 import com.example.travelutilityapp.WeatherActivity;
 import com.example.travelutilityapp.entity.CardItem;
 
@@ -51,7 +52,13 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardItemViewHo
                         intent = new Intent(context, WeatherActivity.class);
                         break;
                     case 1:
-                        intent = new Intent(context, TranslateActivity.class);
+                        intent = new Intent(context, TodoActivity.class);
+                        break;
+                    case 2:
+                        intent = new Intent(context, ConvertCurrencyActivity.class);
+                        break;
+                    case 3:
+                        intent = new Intent(context, ItemListActivity.class);
                         break;
                     default:
                         intent = new Intent(context, HomeActivity.class);

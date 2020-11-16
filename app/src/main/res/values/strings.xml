@@ -3,4 +3,10 @@
     <string name="splash_description">Prepare for enjoying a good trip</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_websitedetailactivity_list">More Information</string>
+    <string name="title_websitedetailactivity_detail">WebsiteDetailActivity Detail</string>
+    <string name="title_website_list">websites</string>
+    <string name="title_website_detail">website Detail</string>
+    <string name="title_item_list">More Information</string>
+    <string name="title_item_detail">Item Detail</string>
 </resources>
